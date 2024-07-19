@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+
+    /* Description */
+
+    .description, .projects h2{
+        padding: 50px;
+    }
+
+    /* Footer */
+
+    footer{
+        text-align: center;
+    }
+
+}
