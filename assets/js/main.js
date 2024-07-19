@@ -3,7 +3,7 @@ $(document).ready(function(){
     // Menu
     var iconMenu = $('.icon-menu');
     var menu = $('.menu');
-    var logoHeader = $('.logo');
+    var logoHeader = $('header .logo');
     var logoBanner = $('.logo-center');
 
     logoHeader.hide();
