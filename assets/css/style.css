@@ -14,6 +14,8 @@
 
 body{
     font-family: 'Helvetica';
+    background-color: #faeddc;
+    color: #301f17;
 }
 
 a, a:hover{
@@ -27,6 +29,7 @@ ul{
 }
 
 h1{
+    color: #faeddc;
     margin-bottom: 0px;
     font-weight: 200;
 }
@@ -34,12 +37,18 @@ h1{
 h2{
     font-size: 40px;
     font-weight: 400;
+    margin-bottom: 30px;
 }
 
 h3{
     font-size: 20px;
     margin: 20px 0;
     font-weight: 400;
+}
+
+.container{
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 /* Buttons */
@@ -76,7 +85,7 @@ button{
 
 /* Inputs */
 
-input{
+input, textarea{
     background-color: #faeddc;
     padding: 10px 20px;
     border-radius: 30px;
@@ -91,13 +100,21 @@ input{
 
 /****** Header *****/
 
-header .top, header .menu, .logo-center, .icon-menu{
+.title-banner{
+    padding: 50px 0 150px;
+}
+
+.title-banner h1{
+    font-size: 50px;
+}
+
+header.home .top, header nav, .logo-center, .icon-menu{
     position: absolute;
 }
 
 /* Logo */
 
-header .logo{
+header.home .logo{
     display: none;
 }
 
@@ -113,21 +130,44 @@ header .logo{
 
 /* Header */
 
+header{
+    background-color: #301f17;
+}
+
 header .top{
+    position: relative;
     width: 100%;
     padding: 50px;
+    z-index: 1;
+}
+
+header.home, header.home .menu{
+    background-color: transparent;
 }
 
 header .menu{
+    top: 0;
+    background-color: #301f17;
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+header nav{
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    color: #faeddc;
     font-size: 60px;
+    color: #faeddc;
+}
+
+header.home .menu{
+    position: inherit;
 }
 
 .icon-menu{
+    cursor: pointer;
     top: 75px;
     right: 50px;
 }
@@ -177,15 +217,20 @@ header .menu{
 
 .projects{
     color: #301f17;
-    background-color: #faeddc;
 }
 
 .projects h2{
-    padding: 150px;
+    padding: 150px 0 0;
 }
 
 .btn-more{
     padding: 100px;
+}
+
+/***** Contact *****/
+
+.contact input, .contact textarea{
+    border: 2px solid #301f17;
 }
 
 /***** Footer *****/
@@ -193,15 +238,10 @@ header .menu{
 footer{
     background-color: #301f17;
     color: #faeddc;
-    padding-bottom: 100px;
 }
 
 footer .logo{
-    padding: 100px;
-}
-
-footer h2{
-    margin-bottom: 30px;
+    padding: 100px 0 0;
 }
 
 footer li{
